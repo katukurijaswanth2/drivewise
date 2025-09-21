@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/logo-jk.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .vehicle {
+      /* display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .card {
+      height: auto;
+      width: 300px;
+
+      padding: 10px;
+ 
+
+
+    }
+
+    .image {
+      height: 200px;
+      width: 100%;
+      /* color: blue; */
+
+    }
+
+    .image img {
+      height: 100%;
+      width: 100%;
+
+    }
+
+   
+
+    .body-type {
+      background-color: rgba(189, 188, 188,0.7);
+      padding: 3px;
+      color: rgb(33, 33, 33);
+      padding: 5px;
+
+
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-family: "Public Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .fuel-type {
+      font-size: 1rem;
+      display: block;
+      font-weight: 300;
+      margin: 5px;
+      text-transform: capitalize;
+      font-family: "Orbitron", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: rgb(72, 72, 248);
+
+    }
+
+    .speci-type {
+      display: flex;
+      height: 50px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .speci-type img {
+      height: 30px;
+      width: 50px;
+    }
+
+    .car-name {
+      text-transform: uppercase;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-family: "Michroma", sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      height: 54.4px;
+      text-wrap: warp;
+
+    }
+
+    .index-cars {
+
+
+
+      align-items: center;
+      /* background: -webkit-linear-gradient(to right, #274046, #E6DADA);
+      /* Chrome 10-25, Safari 5.1-6 */
+      /* background: linear-gradient(115deg, #fafafa, #faf7f7, #f0f0f0); */
+
+     
+
+    }
+
+    .title {
+      margin-top: 5px;
+      height: auto;
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>All Vehicles</h2>
+  <div class="index-cars">
+    <div class="vehicle" id="vehicle"></div>
+  </div>
+
+  <!-- Include your kk.js file -->
+  <script src="kk.js"></script>
+  <script>
+    let container = document.getElementById("vehicle");
+    let values = "";
+
+    for (let i = 0; i < vehicleData.length; i++) {
+      let vehicleD = vehicleData[i];
+
+      for (let j = 0; j < vehicleD.vehicles.length; j++) {
+        let vehicle = vehicleD.vehicles[j];
+
+        values += `
+      <div class="card">
+        <div class="title">
+          <span class="body-type">${vehicle.specifications.type}</span>
+          <h1 class="car-name">${vehicle.name}</h1>
+        </div>
+        <div class="image">
+          <img src="${vehicle.imageCar}" alt="${vehicle.name}">
+        </div>
+        <div class="specifications">
+          <div class="speci-type">
+            <h1 class="fuel-type">${vehicle.fuelType}</h1>
+            <img src="./images/logo-jk.png" alt="logo" width="30" height="30">
+          </div>
+          <h1 class="price">${vehicle.priceRange}</h1>
+       
+        </div>
+      </div>
+    `;
+      }
+    }
+
+    container.innerHTML = values;
+  </script>
+
+
+
+</body>
+
+</html>

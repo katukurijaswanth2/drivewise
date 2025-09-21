@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .title {
+        /* background-color: tan; */
+
+
+    }
+
+    .card {
+        height: 350px;
+        width: 300px;
+        /* background-color: aqua; */
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .imgage {
+        height: 200px;
+        width: 100%;
+        /* color: blue; */
+
+    }
+
+    .imgage img {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30rem;
+        gap: 10px;
+
+    }
+
+    .body-type {
+        background-color: rgb(75, 73, 73);
+        padding: 3px;
+        color: aliceblue;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .fuel-type {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 5px;
+        text-transform: capitalize;
+        color: rgb(195, 204, 212);
+
+    }
+
+    .speci-type {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .speci-type img {
+        height: 100%;
+        width: 100px;
+    }
+
+    .car-name {
+        text-transform: uppercase;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+    }
+</style>
+
+<body>
+
+    <div class="card">
+        <div class="title">
+            <span class="body-type">saden</span>
+            <h1 class="car-name">hyundai</h1>
+        </div>
+        <div class="imgage">
+            <img src="./images/hu.jpg" alt="hyndai">
+        </div>
+
+        <div class="specifications">
+            <div class="speci-type">
+                <h1 class="fuel-type">petrol</h1>
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <h1 class="price">Rs.11.11 - 20.92 Lakh</h1>
+
+        </div>
+    </div>
+
+
+
+    </div>
+</body>
+
+</html>
